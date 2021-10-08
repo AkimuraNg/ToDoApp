@@ -1,6 +1,9 @@
 .App {
+  height: 100%;
   text-align: center;
 }
-
+::-webkit-scrollbar{
+  width: 0;
+}
 
 

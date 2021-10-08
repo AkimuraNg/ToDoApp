@@ -1,10 +1,17 @@
 import './App.css';
 import Navbar from './components/navbar';
+// import Home from './components/home';
+// import Intro from './components/intro';
+// import Todo from './components/todo';
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar />
+      {/* 
+      <Home/>
+      <Intro/>
+      <Todo/> */}
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
