@@ -1,0 +1,12 @@
+#intropage{
+    background-image: url('../image/1.jpg');
+    background-size: cover;
+    background-position: 68%;
+    background-repeat: no-repeat;
+}
+.introview{
+    height: 764px;
+}
+.introview h1{
+    margin-top: 200px;
+}

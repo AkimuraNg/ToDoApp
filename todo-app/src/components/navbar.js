@@ -1,4 +1,5 @@
 import React from 'react'
+import '../css/navbar.css'
 import { Link } from 'react-scroll'
 
 const Navbar = () => {
@@ -28,12 +29,13 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            <div id="intropage">
+            <div id="intropage" className="introview">
                 <div className="container-fluid align-items-center justify-content-center h-100">
                     <div className="row d-flex justify-content-center text-center">
                         <div className="col-md-10">
-                            <h1 className="pt-5">Hello There</h1>
+                            <h1>Hello There</h1>
                             <p>Welcome to the to do app</p>
+                            <p>For introduction, my name is Duy Nguyen</p>
                         </div>
                     </div>
                 </div>
