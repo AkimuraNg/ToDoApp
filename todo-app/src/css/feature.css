@@ -1,0 +1,9 @@
+.featuresImage{
+    height: 200px;
+    border-radius: 8px;
+}
+@media (max-width: 1024px){
+    .featuresImage{
+        height: 100px;
+    }
+}
