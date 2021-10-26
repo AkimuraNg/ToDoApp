@@ -1,95 +1,32 @@
 import React from 'react'
-import '../css/todo.css'
+import Form from './form'
+import { RiCloseCircleLine } from 'react-icons/ri'
+import { TiEdit } from 'react-icons/ti'
 
-function TodoForm({ addTodo }) {
-    const [value, setValue] = React.useState("");
-
-    const handleSubmit = e => {
-        e.preventDefault();
-        if (!value) return;
-        addTodo(value);
-        setValue("");
+const Todo = ({ todos, doneTodo, deleteTodo, updateTodo }) => {
+    const [edit, setEdit] = React.useState({
+        id: null,
+        value: ''
+    });
+    const submitUpdate = value => {
+        updateTodo(edit.id, value);
+        setEdit({
+            id: null,
+            value: ''
+        });
     };
-
-    return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                className="input"
-                value={value}
-                onChange={e => setValue(e.target.value)}
-            />
-        </form>
-    );
-}
-
-function Todos({ todo, index, completeTodo, removeTodo }) {
-    return (
-        // <div className="todo">
-        //     {todo.text}
-        // </div>
-        <div
-            className="todo"
-            style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}
-        >
-            {todo.text}
-            <div>
-                <button onClick={() => completeTodo(index)} style={{ border: "1px solid gray", borderRadius: "4px", backgroundColor: "blue" }}>
-                    <img src={require('../image/check-lg.svg').default} alt="complete" height={20} />
-                </button>
-                <button onClick={() => removeTodo(index)} style={{ border: "1px solid gray", borderRadius: "4px", backgroundColor: "red" }}>
-                    <img src={require('../image/x-lg.svg').default} alt="complete" height={20} />
-                </button>
+    if (edit.id) {
+        return <Form edit={edit} onSubmit={submitUpdate} />;
+    }
+    return todos.map((todo, index) => (
+        <div className={todo.isComplete ? 'row-complete' : 'row'} key={index}>
+            <div key={todo.id} onClick={() => doneTodo(todo.id)}>{todo.text}</div>
+            <div className="icons">
+                <RiCloseCircleLine onClick={() => deleteTodo(todo.id)} className="delete" />
+                <TiEdit onClick={() => setEdit({ id: todo.id, value: todo.text })} className="edit" />
             </div>
         </div>
-    )
-}
-
-const Todo = () => {
-    const [todos, setTodos] = React.useState([
-        {
-            text: "Do laundry", isCompleted: false
-        },
-        {
-            text: "Go shopping", isCompleted: false
-        },
-        {
-            text: "Make dinner", isCompleted: false
-        }
-    ])
-    const addTodo = text => {
-        const newTodos = [...todos, { text }];
-        setTodos(newTodos);
-    };
-    const completeTodo = index => {
-        const newTodos = [...todos];
-        newTodos[index].isCompleted = true;
-        setTodos(newTodos);
-    };
-    const removeTodo = index => {
-        const newTodos = [...todos];
-        newTodos.splice(index, 1);
-        setTodos(newTodos);
-    };
-    return (
-        <div className="container mt-5">
-            <h1>Welcome to the Todo app</h1>
-            <section id="todopage" className="todo">
-                <div className="todo-list">
-                    {todos.map((todo, index) => (
-                        <Todos
-                            key={index}
-                            index={index}
-                            todo={todo}
-                            completeTodo={completeTodo}
-                            removeTodo={removeTodo} />
-                    ))}
-                    <TodoForm addTodo={addTodo} />
-                </div>
-            </section>
-        </div>
-    )
+    ))
 }
 
 export default Todo
-
