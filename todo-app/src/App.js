@@ -8,7 +8,9 @@ function App() {
     <div className="App">
       <Navbar />
       <Features />
-      <List />
+      <div className="container todo-app">
+        <List />
+      </div>
     </div>
   );
 }

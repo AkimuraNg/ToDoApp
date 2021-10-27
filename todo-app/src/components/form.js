@@ -7,10 +7,12 @@ function Form(props) {
 
     React.useEffect(() => {
         inputRef.current.focus();
-    })
+    });
+
     const handleChange = e => {
         setInput(e.target.value);
     };
+
     const handleSubmit = e => {
         e.preventDefault();
 
@@ -19,37 +21,41 @@ function Form(props) {
             text: input
         });
         setInput('');
-    }
+    };
 
     return (
-        <form onSubmit={handleSubmit} className="form">
+        <form onSubmit={handleSubmit} className='todo-form'>
             {props.edit ? (
                 <>
                     <input
-                        placeholder="Update todo"
+                        placeholder='Update your item'
                         value={input}
                         onChange={handleChange}
                         name='text'
                         ref={inputRef}
-                        className="input-edit"
+                        className='todo-input edit'
                     />
-                    <button onClick={handleSubmit} className="edit-button">Update</button>
+                    <button onClick={handleSubmit} className='todo-button edit'>
+                        Update
+                    </button>
                 </>
             ) : (
                 <>
                     <input
-                        placeholder="Add todo"
+                        placeholder='Add a todo'
                         value={input}
                         onChange={handleChange}
                         name='text'
+                        className='todo-input'
                         ref={inputRef}
-                        className="input"
                     />
-                    <button onClick={handleSubmit} className="edit-button">Add Todo</button>
+                    <button onClick={handleSubmit} className='todo-button'>
+                        Add todo
+                    </button>
                 </>
             )}
         </form>
-    )
+    );
 }
 
-export default Form
+export default Form;
