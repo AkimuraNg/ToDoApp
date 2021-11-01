@@ -6,7 +6,7 @@ const Features = () => {
         <main className="mt-5">
             <div className="container">
                 <section id="featurepage" className="featureviews">
-                    <h1>Getting Started</h1>
+                    <h1 style={{color: "white"}}>Getting Started</h1>
 
                 </section>
                 <div className="row d-flex justify-content-center mb-4">
@@ -16,7 +16,7 @@ const Features = () => {
                 </div>
                 <div className="row">
                     <div className="col-md-4 mb-5">
-                        <h4 className="my-4">Create a list</h4>
+                        <h4 className="my-4" style={{color: "white"}}>Create your own task</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
                             maiores nam,
                             aperiam minima
@@ -25,7 +25,7 @@ const Features = () => {
                     </div>
 
                     <div className="col-md-4 mb-1">
-                        <h4 className="my-4">Edit and Delete</h4>
+                        <h4 className="my-4" style={{color: "white"}}>Edit and Delete</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
                             maiores nam,
                             aperiam minima
@@ -34,12 +34,12 @@ const Features = () => {
                     </div>
 
                     <div className="col-md-4 mb-1">
-                        <h4 className="my-4">Drag and Drop</h4>
+                        <h4 className="my-4" style={{color: "white"}}>Hide unfinished items</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
                             maiores nam,
                             aperiam minima
                             assumenda deleniti hic.</p>
-                        <img className="featuresImage" src={require("../image/1.jpg").default} alt="feature1" />
+                      
                     </div>
                 </div>
             </div>

@@ -43,7 +43,7 @@ function List() {
   
     return (
       <div className="todo" id="todopage">
-        <h1>What Are You Doing Today?</h1>
+        <h1>What Are We Doing Today?</h1>
         <Form onSubmit={addTodo} />
         <Todo
           todos={todos}

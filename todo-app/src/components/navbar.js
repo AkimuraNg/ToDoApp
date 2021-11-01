@@ -34,8 +34,11 @@ const Navbar = () => {
                     <div className="row d-flex justify-content-center text-center">
                         <div className="col-md-10">
                             <h1>Hello There</h1>
-                            <p>Welcome to the to do app</p>
-                            <p>For introduction, my name is Duy Nguyen</p>
+                            <h2>Welcome to this todo app</h2>
+                            <p>For introduction, my name is Duy Nguyen the creator of this todo application.
+                                <br/>This is the simple application with few features. Future update will comes soon.
+                                <br/>You can learn more about the features of this application below.
+                            </p>
                         </div>
                     </div>
                 </div>
