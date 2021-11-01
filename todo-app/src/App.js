@@ -11,6 +11,17 @@ function App() {
       <div className="container todo-app">
         <List />
       </div>
+      <footer className="text-center text-lg-start footer">
+        <div className="container d-flex justify-content-center">
+          <h5>Thank you for using this application</h5>
+        </div>
+        
+        <div className="text-center text-white p-3">
+          © 2021 Copyright:
+          <p className="text-white" >Hoang Nhat Duy Nguyen</p>
+        </div>
+        
+      </footer>
     </div>
   );
 }

@@ -19,6 +19,15 @@
   border-radius: 10px;
   padding-bottom: 32px;
 }
+.footer{
+  margin-top: 20px;
+  border-top: 2px solid #0727b6;
+  background: #03166d
+}
+.footer h5{
+  padding-top: 20px;
+  color: #fff;
+}
 @media (max-width: 1024px) {
       .todo-app{
         width: unset;

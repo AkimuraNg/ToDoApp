@@ -1,6 +1,8 @@
 .featuresImage{
-    height: 100px;
-    border-radius: 8px;
+    height: 70px;
+}
+.features p{
+    font-size: 16px;
 }
 @media (max-width: 1024px){
     .featuresImage{
