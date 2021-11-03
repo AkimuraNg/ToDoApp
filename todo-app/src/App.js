@@ -11,7 +11,7 @@ function App() {
       <div className="container todo-app">
         <List />
       </div>
-      <footer className="text-center text-lg-start footer">
+      <footer className="text-center text-lg-start footer bg-dark">
         <div className="container d-flex justify-content-center">
           <h5>Thank you for using this application</h5>
         </div>
