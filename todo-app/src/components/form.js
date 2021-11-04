@@ -1,5 +1,5 @@
 import React from 'react'
-
+//create form to add to do items
 function Form(props) {
     const [input, setInput] = React.useState(props.edit ? props.edit.value : '');
 
@@ -8,11 +8,11 @@ function Form(props) {
     React.useEffect(() => {
         inputRef.current.focus();
     });
-
+    // changing items
     const handleChange = e => {
         setInput(e.target.value);
     };
-
+    //submit changed items
     const handleSubmit = e => {
         e.preventDefault();
 
@@ -28,7 +28,7 @@ function Form(props) {
             {props.edit ? (
                 <>
                     <input
-                        placeholder='Update your item'
+                        placeholder='Update your task'
                         value={input}
                         onChange={handleChange}
                         name='text'

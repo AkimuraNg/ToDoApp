@@ -3,10 +3,10 @@ import '../css/feature.css'
 
 const Features = () => {
     return (
-        <main className="mt-5 features">
+        <main className="mt-5 features" id="featurepage" >
             <div className="container">
-                <section id="featurepage" className="featureviews">
-                    <h1 style={{ color: "white" }}>Getting Started</h1>
+                <section className="featureviews">
+                    <h1 style={{ color: "white" }}>Features</h1>
 
                 </section>
                 <div className="row d-flex justify-content-center mb-4">
@@ -17,7 +17,7 @@ const Features = () => {
                 <div className="row">
                     <div className="col-md-5 mb-5 featurecard">
                         <h4 className="my-4" style={{ color: "white" }}>Create your own task</h4>
-                        <p>You can create your own list of tasks without worrying about the limit. The number of tasks are unlimited.</p>
+                        <p>You can create your own list of tasks without worrying about the limit. The number of tasks you can think of are unlimited.</p>
                         <img className="featuresImage" src={require("../image/list-check.svg").default} alt="feature1" />
                     </div>
 

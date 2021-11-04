@@ -2,7 +2,7 @@ import React from 'react'
 import Todo from './todo'
 import Form from './form'
 import '../css/todo.css'
-
+//Create a list to contain to do items and form
 function List() {
     const [todos, setTodos] = React.useState([]);
   

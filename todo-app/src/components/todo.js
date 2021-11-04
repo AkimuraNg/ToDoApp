@@ -8,7 +8,7 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
     id: null,
     value: ''
   });
-
+  // function to submit new changes in to do items
   const submitUpdate = value => {
     updateTodo(edit.id, value);
     setEdit({
@@ -16,7 +16,7 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
       value: ''
     });
   };
-
+  // return previous content if no changes
   if (edit.id) {
     return <Form edit={edit} onSubmit={submitUpdate} />;
   }
